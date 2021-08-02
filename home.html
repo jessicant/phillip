@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="main.css">
+</head>
+<script type = "text/javascript">
+  var totalFed = 0;
+  var totalPats = 0
+  function feed(amount){
+    totalFed += amount;
+    var health = document.getElementById("health");
+    health.innerText = totalFed/4 + " HP "
+  
+  function pat(amount) {
+
+  }
+
+  }
+</script>
+<body>
+  <h1>
+    (●´ω｀●)
+  </h1>
+  <p id = "health"> 0 HP</p>
+  <p id = "pats"> 0 Pats</p>
+  <button onclick = "feed(30)"> Feed </button>
+  <button onclick = "pat(1)"> Pat </button>
+</body>
+</html>
