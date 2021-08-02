@@ -1,5 +1,5 @@
 icon = ("(●´ω｀●)")
-name = "Lucifer"
+name = "Luciifer"
 age = 0
 weight = 0.83
 hungry = False
