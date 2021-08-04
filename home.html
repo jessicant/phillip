@@ -29,11 +29,11 @@
 
   function pat(){
     var icon = document.getElementById("icon");
-    icon.innerText = "≧◡≦";
-    setTimeout(() => {icon.innerText = "(●´ω｀●)";}, 2000);
-    var pats = document.getElementId("petting");
+    var pats = document.getElementById("petting");
     totalPats += 1;
     pats.innerText = totalPats + " Pats";
+    icon.innerText = "≧◡≦";
+    setTimeout(() => {icon.innerText = "(●´ω｀●)"}, 2000);
   }
 
 </script>
