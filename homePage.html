@@ -6,40 +6,6 @@
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" type="image/png" href="./assets/jessicantIcon.png">
     <!-- Place this tag in your head or just before your close body tag. -->
-    <script 
-    type = "text/javascript">
-      var totalFed = 0;
-      var totalPats = 0;
-      var sleeping = false;
-      function feed(amount){
-        totalFed += amount;
-        var health = document.getElementById("health");
-        health.innerText = totalFed/4 + " HP ";
-      }
-    
-      function sleepingIcon() {
-        if (sleeping){
-          sleeping = false;
-        } else {
-          sleeping = true;
-        }
-        var icon = document.getElementById("icon");
-        if(!sleeping){
-         icon.innerText = "(●´ω｀●)"
-       } else {
-          icon.innerText = "(︶｡︶✽)"
-       }
-      }
-    
-      function pat(){
-        var icon = document.getElementById("icon");
-        var pats = document.getElementById("petting");
-        totalPats += 1;
-        pats.innerText = totalPats + " Pats";
-        icon.innerText = "≧◡≦";
-        setTimeout(() => {icon.innerText = "(●´ω｀●)"}, 2000);
-      }
-      </script>
 
 </head>
 
@@ -63,11 +29,21 @@
         </nav>
         <phillipSection>
           <p id = "icon"> (●´ω｀●) </p>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <p id = "health"> 0 HP</p>
+          <p id = "petting"> 0 Pats</p>
         </phillipSection>
+        <header>
+          <button onclick = "feed(30)"> Feed </button>
+          <button onclick = "sleepingIcon()"> Put to Sleep/Wake Up </button>
+          <button onclick = "pat()">Pat</button>
+        </header>
       </div>
   <a class="github-button" href="https://github.com/jhamilton159" aria-label="Follow @Jessicant on GitHub">Follow @Jessicant</a>
     </p>
-    <!-- Place this tag in your head or just before your close body tag. -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script>src = "phillip.js"</script>
 </body>
 </html>

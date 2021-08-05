@@ -52,10 +52,12 @@ header {
   padding: 2.5% 0;
 }
 
-nav, section, phillipSection {
-  padding: 22% 0;
+section, phillipSection {
+  padding-top: 21%;
 }
 nav {
   text-align: center;
+  padding-bottom: 28.8%;
+  padding-top: 5%;
 }
 
