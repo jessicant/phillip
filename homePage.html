@@ -5,11 +5,10 @@
     <title>Phillip ~ Jessica Hamilton</title>
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" type="image/png" href="./assets/jessicantIcon.png">
-    <!-- Place this tag in your head or just before your close body tag. -->
-
+    <script type = "text/javascript" src = "phillip.js"></script>
 </head>
 
-<body>
+<body onload="readTextFile();">
     <p>
       <div class="wrapper">
         <h1>Jess' Virtual Cat</h1>
@@ -33,17 +32,15 @@
           <br></br>
           <br></br>
           <br></br>
-          <p id = "health"> 0 HP</p>
+          <p id = "health" value => HP</p>
           <p id = "petting"> 0 Pats</p>
         </phillipSection>
         <header>
-          <button onclick = "feed(30)"> Feed </button>
-          <button onclick = "sleepingIcon()"> Put to Sleep/Wake Up </button>
+          <button onclick = "feed(30);"> Feed </button>
+          <button onclick = "sleepingIcon();"> Put to Sleep/Wake Up </button>
           <button onclick = "pat()">Pat</button>
         </header>
       </div>
-  <a class="github-button" href="https://github.com/jhamilton159" aria-label="Follow @Jessicant on GitHub">Follow @Jessicant</a>
     </p>
-    <script>src = "phillip.js"</script>
 </body>
 </html>

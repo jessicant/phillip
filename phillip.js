@@ -1,10 +1,19 @@
 var totalFed = 0;
 var totalPats = 0;
 var sleeping = false;
+
+function readTextFile(){
+  var rawFile = new XMLHttpRequest();
+  rawFile.open("GET", "file://C:\Users\Jess\Desktop\Programmin\Projects\Pet\testing.txt");
+  var allText = rawFile.responseText;
+  console.log(allText);
+}
+
 function feed(amount){
   totalFed += amount;
   var health = document.getElementById("health");
-  health.innerText = totalFed/4 + " HP ";
+  health.textContent = totalFed/4 + " HP ";
+  console.log("what up");
 }
 
 function sleepingIcon() {
