@@ -8,7 +8,7 @@
     <script type = "text/javascript" src = "phillip.js"></script>
 </head>
 
-<body onload="feed(0); pat(0)">
+<body onload="init()">
     <p>
       <div class="wrapper">
         <h1>Jess' Virtual Cat</h1>
@@ -32,13 +32,13 @@
           <br></br>
           <br></br>
           <br></br>
-          <p id = "health" value => HP</p>
+          <p id = "health" value =>  0 HP</p>
           <p id = "petting"> 0 Pats</p>
         </phillipSection>
         <header>
-          <button onclick = "feed(30)"> Feed </button>
-          <button onclick = "sleepingIcon()"> Put to Sleep/Wake Up </button>
-          <button onclick = "pat(1)">Pat</button>
+          <button onclick="feed(30)"> Feed </button>
+          <button onclick="toggleSleep()"> Put to Sleep/Wake Up </button>
+          <button onclick="patThePhillip(1)">Pat</button>
         </header>
       </div>
     </p>

@@ -1,32 +1,38 @@
 myStorage = window.localStorage;
 var totalFed;
 var totalPats;
-inboundStorageProcessing();
+var sleeping;
+loadStateFromLocalStorage();
 
-function inboundStorageProcessing(){
+function init(){
+  loadStateFromLocalStorage();
+  feed(0);
+  patThePhillip(0);
+}
+/*This functions loads the state of phillip from the computer's local storage.
+The variables pulled from local storage are all strings. If the variables do not exist,
+i.e. there is no record of a phillip on this machine, variables will be created.
+Then the variables are parsed into their correct forms.
+*/
+function loadStateFromLocalStorage(){
   totalFed = myStorage.getItem('totalFed');
   totalPats = myStorage.getItem('totalPats');
   sleeping = myStorage.getItem('sleeping');
 
   if (totalFed == null){
-    totalFed = '0';
+    totalFed = 0;
     myStorage.setItem('totalFed', totalFed);
   }
   if (totalPats == null){
-    totalPats = '0';
+    totalPats = 0;
     myStorage.setItem('totalPats', totalPats);
   }
   if (sleeping == null){
-    sleeping = 'f';
+    sleeping = false;
     myStorage.setItem('sleeping', sleeping);
   }
   totalFed = parseInt(totalFed);
   totalPats = parseInt(totalPats);
-  if (sleeping == 'f'){
-    sleeping = false;
-  } else if (sleeping == 't'){
-    sleeping = true;
-  }
 }
 
 function feed(amount){
@@ -36,7 +42,7 @@ function feed(amount){
   outboundStorageProcessing();
 }
 
-function sleepingIcon() {
+function toggleSleep() {
   if (sleeping){
     sleeping = false;
   } else if (!sleeping) {
@@ -52,24 +58,23 @@ function sleepingIcon() {
 
 }
 
-function pat(amount){
-  var icon = document.getElementById("icon");
+function patThePhillip(amount){
   var pats = document.getElementById("petting");
   totalPats += amount;
-  outboundStorageProcessing();
   pats.innerText = totalPats + " Pats";
+  outboundStorageProcessing();
   if (amount > 0){
-    icon.innerText = "≧◡≦";
+    toggleHappy(document.getElementById("icon"));
   }
+}
+
+function toggleHappy(icon){
+  icon.innerText = "≧◡≦";
   setTimeout(() => {icon.innerText = "(●´ω｀●)"}, 2000);
 }
 
 function outboundStorageProcessing(){
-  myStorage.setItem('totalFed', totalFed.toString());
-  myStorage.setItem('totalPats', totalPats.toString());
-  if (sleeping){
-    myStorage.setItem('sleeping', 't');
-  } else if (!sleeping) {
-    myStorage.setItem('sleeping', 'f');
+  myStorage.setItem('totalFed', totalFed);
+  myStorage.setItem('totalPats', totalPats);
+  myStorage.setItem('sleep', sleeping);
   }
-}
