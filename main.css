@@ -1,29 +1,32 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .wrapper {
   width: 75%;
   margin: 0 auto;
 }
 
-header {
-	width: 100%;
+header,
+nav,
+section,
+buttonSection {
+  border: 1px solid rgba(255,255,255,0.8);
+  margin-bottom: 10px;
+  border-radius: 3px;
 }
 
-nav, section, phillipSection {
+nav, section, phillipSection, buttonSection {
   float: left;
 }
-
-nav {
-  width: 15%;
-}
-
-section, phillipSection {
+section, phillipSection, buttonSection {
   width: 85%;
 }
 
-
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+section, phillipSection {
+  padding-top: 17px;
 }
 
 body {
@@ -34,32 +37,28 @@ body {
   margin: 0;
 }
 
-header,
-nav,
-section {
-  border: 1px solid rgba(255,255,255,0.8);
-  margin-bottom: 10px;
-  border-radius: 3px;
-}
-
 phillipSection {
   border: 1px solid rgba(255,255,255,0.8);
   margin-bottom: 1px;
   border-radius: 3px; 
 }
 
-header {
-  padding: 2.5% 0;
-}
-
-section, phillipSection {
-  padding-top: 1%;
-}
 nav {
   text-align: center;
   padding-bottom: 30%;
-  padding-top: 5%;
+  padding-top: 7.5%;
+  width: 15%;
 }
+
 a {
   color: #f6b3e5;
+}
+
+buttonSection{
+  padding: 2.5%;
+}
+
+header {
+	width: 100%;
+  padding: 2.5% 0; 
 }

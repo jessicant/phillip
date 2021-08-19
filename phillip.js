@@ -11,8 +11,7 @@ var img;
 
 function init(){
   img = document.getElementById("phillipImage");
-  loadStateFromLocalStorage();
-  var time = getSystemTime(); 
+  loadStateFromLocalStorage(); 
   feed(0);
   patThePhillip(0);
 }
