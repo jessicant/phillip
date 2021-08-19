@@ -44,7 +44,7 @@ section {
 
 phillipSection {
   border: 1px solid rgba(255,255,255,0.8);
-  margin-bottom: 10px;
+  margin-bottom: 1px;
   border-radius: 3px; 
 }
 
@@ -53,11 +53,11 @@ header {
 }
 
 section, phillipSection {
-  padding-top: 21%;
+  padding-top: 1%;
 }
 nav {
   text-align: center;
-  padding-bottom: 27.25%;
+  padding-bottom: 30%;
   padding-top: 5%;
 }
 a {
