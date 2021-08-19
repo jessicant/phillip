@@ -8,7 +8,7 @@
     <script type = "text/javascript" src = "phillip.js"></script>
 </head>
 
-<body onload="readTextFile();">
+<body onload="init()", onmousemove>
     <p>
       <div class="wrapper">
         <h1>Jess' Virtual Cat</h1>
@@ -27,20 +27,19 @@
           <a href = "https://github.com/jhamilton159/phillip">Phillip's Code</a>
         </nav>
         <phillipSection>
-          <p id = "icon"> (●´ω｀●) </p>
+          <img src="assets/defaultPhillip.png" id="phillipImage" width="50%" />
           <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <p id = "health" value => HP</p>
-          <p id = "petting"> 0 Pats</p>
+          <p id = "health">  0 HP</p>
+          <p id = "happiness"> 0 Happiness</p>
         </phillipSection>
-        <header>
-          <button onclick = "feed(30);"> Feed </button>
-          <button onclick = "sleepingIcon();"> Put to Sleep/Wake Up </button>
-          <button onclick = "pat()">Pat</button>
-        </header>
+        <buttonSection>
+          <button onclick="feed(30)"> Feed </button>
+          <button onclick="toggleSleep()"> Put to Sleep/Wake Up </button>
+          <button onclick="patThePhillip(1)">Pat</button>
+          <button onclick ="hourPassage(1)">decrease</button>
+        </buttonSection>
       </div>
     </p>
+    <script src = "phillip.js"></script>
 </body>
 </html>
